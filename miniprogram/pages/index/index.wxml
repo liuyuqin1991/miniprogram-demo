@@ -39,4 +39,9 @@
       <text>快速新建云函数</text>
     </navigator>
   </view>
+
+  <!-- 新增姓名 -->
+  <view class="name">
+    带娃大无多
+  </view>
 </view>

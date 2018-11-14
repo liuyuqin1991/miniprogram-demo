@@ -69,22 +69,22 @@ Page({
   },
 
   onCounterInc: function() {
-    // const db = wx.cloud.database()
-    // const newCount = this.data.count + 1
-    // db.collection('counters').doc(this.data.counterId).update({
-    //   data: {
-    //     count: newCount
-    //   },
-    //   success: res => {
-    //     this.setData({
-    //       count: newCount
-    //     })
-    //   },
-    //   fail: err => {
-    //     icon: 'none',
-    //     console.error('[数据库] [更新记录] 失败：', err)
-    //   }
-    // })
+    const db = wx.cloud.database()
+    const newCount = this.data.count + 1
+    db.collection('counters').doc(this.data.counterId).update({
+      data: {
+        count: newCount
+      },
+      success: res => {
+        this.setData({
+          count: newCount
+        })
+      },
+      fail: err => {
+        icon: 'none',
+        console.error('[数据库] [更新记录] 失败：', err)
+      }
+    })
   },
 
   onCounterDec: function() {
